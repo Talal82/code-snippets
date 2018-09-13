@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <meta name="author" content="Ehtisham Elahi" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <script src="js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/selectivizr.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <style type="text/css">
+      div{
+        display: inline-block !important;
+      }
+    </style>
+    <![endif]-->
+  </head>
+<body>
+	<noscript>
+	  <code>
+	  For full functionality of this site it is necessary to enable JavaScript.
+      Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+      instructions how to enable JavaScript in your web browser</a>.
+	  </code>
+	</noscript>
+    
+    <!-- <div class="panels">
+    	<ul class="tabs">
+        	<li class="active" panel-tab="panel1">Panel1</li>
+            <li panel-tab="panel2">Panel2</li>
+            <li panel-tab="panel3">Panel3</li>
+            <li panel-tab="panel4">Panel4</li>
+        </ul>
+        <div id="panel1" class="panelactive">
+        	Content1<br />
+            Content2<br />
+            Content3<br />
+            Content4<br />
+            Content5
+        </div>
+        <div id="panel2">
+        	Content6<br />
+            Content7<br />
+            Content8<br />
+            Content9<br />
+            Content10
+        </div>
+        <div id="panel3">
+        	Content11<br />
+            Content12<br />
+            Content13<br />
+            Content14<br />
+            Content15
+        </div>
+        <div id="panel4">
+        	Content16<br />
+            Content17<br />
+            Content18<br />
+            Content19<br />
+            Content20
+        </div>
+    </div> -->
+    
+    <div class="panels">
+    	<ul class="tabs">
+        	<li class="active" panel-tab="panel5">Panel1</li>
+            <li panel-tab="panel6">Panel2</li>
+            <li panel-tab="panel7">Panel3</li>
+            <li panel-tab="panel8">Panel4</li>
+        </ul>
+        <div id="panel5" class="panelactive">
+        	Content1<br />
+            Content2<br />
+            Content3<br />
+            Content4<br />
+            Content5
+        </div>
+        <div id="panel6">
+        	Content6<br />
+            Content7<br />
+            Content8<br />
+            Content9<br />
+            Content10
+        </div>
+        <div id="panel7">
+        	Content11<br />
+            Content12<br />
+            Content13<br />
+            Content14<br />
+            Content15
+        </div>
+        <div id="panel8">
+        	Content16<br />
+            Content17<br />
+            Content18<br />
+            Content19<br />
+            Content20
+        </div>
+    </div>
+    <script>
+	  document.oncopy = cpyctDisabled;
+	  document.oncut = cpyctDisabled;
+	  function cpyctDisabled(){
+		return false;		
+	  }
+	</script>
+    
+    <script>
+	$(document).ready(function(){
+		$('.panels .tabs li').on('click',function(){
+			var $panel = $(this).closest('.panels');
+			$panel.find('.active').removeClass('active');
+			$(this).addClass('active');
+			var panelToShow = $(this).attr('panel-tab');
+			
+			$panel.find('.panelactive').slideUp(300,function(){
+				$(this).removeClass('panelactive');
+				$('#'+panelToShow).slideDown(300).addClass('panelactive');
+				});
+			});
+		});
+    </script>
+  </body>
+</html>

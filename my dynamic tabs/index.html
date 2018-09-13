@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic tabs</title>
+	<!-- import needed js and css files first of bootstrap -->
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="#home1" data-toggle="tab" aria-expanded="false" class="nav-link active">
+						Info
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#set2" data-toggle="tab" aria-expanded="false" class="nav-link">
+						Image
+					</a>
+				</li>
+
+			</ul>
+			
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade show active" id="home1">
+					<h4>Project Info</h4>
+					
+				</div>
+				<div role="tabpanel" class="tab-pane fade " id="set2">
+					<h4>Project Image</h4>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+
+	<script>
+		//this script works for only these two tabs with ids
+		$('.nav-link').on('click', function(){
+		var tabId = $(this).attr('href');
+		if(tabId == "#home1"){
+			$('#set2').removeClass('show active');
+			$(tabId).addClass('show active');
+		}
+
+		if(tabId == "#set2"){
+			$('#home1').removeClass('show active');
+			$(tabId).addClass('show active');
+		}
+	</script>
+</body>
+</html>
