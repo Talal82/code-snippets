@@ -35,20 +35,5 @@
 
 		</div>
 	</div>
-
-	<script>
-		//this script works for only these two tabs with ids
-		$('.nav-link').on('click', function(){
-		var tabId = $(this).attr('href');
-		if(tabId == "#home1"){
-			$('#set2').removeClass('show active');
-			$(tabId).addClass('show active');
-		}
-
-		if(tabId == "#set2"){
-			$('#home1').removeClass('show active');
-			$(tabId).addClass('show active');
-		}
-	</script>
 </body>
 </html>
